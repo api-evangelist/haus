@@ -1,7 +1,12 @@
 aid: haus
 name: Haus
-description: Haus is a company surfaced as a portfolio company of insight-partners and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Haus is an AI-powered causal marketing measurement platform that helps enterprise brands
+  quantify the true incrementality of their advertising spend. The platform runs on-demand geo-based
+  incrementality experiments (treatment vs. holdout groups), causal media mix modeling (MMM) grounded
+  in experimental data, and daily causal attribution reporting, so marketers can see which channels
+  actually drive revenue. Haus reports running thousands of experiments annually across tens of billions
+  of dollars in optimized ad spend for customers such as FanDuel, Intuit, Wayfair, and Coursera. Founded
+  by former Google economists, Haus is backed by Insight Partners.
 url: https://raw.githubusercontent.com/api-evangelist/haus/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +14,32 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://cdn.prod.website-files.com/636c27cea6bf2a38e9eea317/698cc912d640157690a26208_og%20image%20-%20home%20-%201600.jpg
 tags:
 - Company
+- Marketing
+- Analytics
+- Incrementality
+- Measurement
+- Attribution
+- Media Mix Modeling
+- Causal Inference
+- Advertising
+- MarTech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +47,36 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/haus-trust-center.yml
+- type: DomainSecurity
+  url: security/haus-domain-security.yml
+- type: Compliance
+  url: security/haus-trust-center.yml
 - type: Website
   url: https://www.haus.io/
+- type: About
+  url: https://www.haus.io/about
+- type: Blog
+  url: https://www.haus.io/blog
+- type: Pricing
+  url: https://www.haus.io/pricing
+- type: Support
+  url: https://www.haus.io/support
+- type: StatusPage
+  url: https://status.haus.io/
+- type: Login
+  url: https://app.haus.io/login
+- type: SignUp
+  url: https://www.haus.io/demo
+- type: TermsOfService
+  url: https://haus.io/legal/terms
+- type: PrivacyPolicy
+  url: https://haus.io/legal/privacy-policy
+- type: SecurityContact
+  url: mailto:security@haus.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
