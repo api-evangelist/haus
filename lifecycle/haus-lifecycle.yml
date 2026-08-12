@@ -1,0 +1,58 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://status.haus.io/, https://www.haus.io/support, https://trust.haus.io/,
+  https://www.haus.io/sitemap.xml, https://www.haus.io/llms.txt
+description: >-
+  Haus operates a public status page but publishes no API, and therefore no API
+  versioning policy, no deprecation policy, no Sunset/Deprecation header
+  behaviour and no changelog. The status page is the only lifecycle-transparency
+  surface Haus serves. Nothing here is derived from an OpenAPI, because Haus
+  publishes none.
+versioning:
+  scheme: null
+  mechanism: null
+  docs: null
+  notes: >-
+    No API versioning policy is published. Haus ships a login-gated SaaS
+    application (app.haus.io) and no public API, so there is no versioned
+    contract to govern.
+deprecation:
+  policy_url: null
+  changelog: null
+  sunset_header: false
+  rfc8594: false
+  notes: >-
+    No deprecation or end-of-life policy is published on the marketing site, the
+    support page, the trust center or in the sitemap. No Deprecation pointer is
+    emitted in apis.yml.
+sla:
+  url: null
+  public_uptime_target: null
+  notes: >-
+    No numeric uptime SLA is published. Availability commitments, if any, are
+    handled in the customer agreement (https://www.haus.io/legal/terms).
+status_page:
+  url: https://status.haus.io/
+  http_status: 200
+  platform: UptimeRobot (hosted status page)
+  title: Haus Status page
+  features:
+  - 90-day uptime calendar
+  - Overall uptime for last 24 hours / 7 / 30 / 90 days
+  - Email subscription for status updates
+  - Status update history
+  machine_readable_feed: false
+  notes: >-
+    Components load client-side from the UptimeRobot backend, so the served HTML
+    carries the page chrome but not the per-component state. No RSS/Atom or JSON
+    status feed is advertised.
+  fetched: '2026-08-12'
+changelog:
+  published: false
+  notes: >-
+    No dated product or API changelog was found. Product announcements are made
+    in the blog (https://www.haus.io/blog), which is undated release commentary
+    rather than a changelog, so no ChangeLog pointer is emitted.
+deprecated_products: []
+deprecated_operations: []

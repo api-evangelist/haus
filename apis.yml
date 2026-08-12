@@ -27,7 +27,7 @@ accessModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-12'
 image: https://cdn.prod.website-files.com/636c27cea6bf2a38e9eea317/698cc912d640157690a26208_og%20image%20-%20home%20-%201600.jpg
 tags:
 - Company
@@ -75,8 +75,40 @@ common:
   url: https://haus.io/legal/privacy-policy
 - type: SecurityContact
   url: mailto:security@haus.io
+- type: VulnerabilityDisclosure
+  url: security/haus-vulnerability-disclosure.yml
+- type: Security
+  url: security/haus-vulnerability-disclosure.yml
+- type: LLMsTxt
+  url: llms/haus-llms.txt
+- type: Plans
+  url: plans/haus-plans-pricing.yml
+- type: Lifecycle
+  url: lifecycle/haus-lifecycle.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 8
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Haus ships only a login-gated SaaS app at app.haus.io — there is no API host
+    in DNS at all (api, developer, docs, graph, gateway, public-api and six more
+    candidate subdomains are all NXDOMAIN), the 40-URL sitemap contains no
+    developer or reference page, the four published pricing tiers offer no API
+    access, and Haus's own llms.txt indexes 45 marketing, blog and case-study
+    pages without naming a single developer resource.
+  evidence:
+  - url: https://www.haus.io/llms.txt
+    status: 200
+  - url: https://www.haus.io/pricing
+    status: 200
+  - url: https://www.haus.io/openapi.json
+    status: 404
+  - url: https://app.haus.io/openapi.json
+    status: 404
+  - url: https://www.haus.io/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-12'

@@ -1,0 +1,130 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+provider: Haus
+providerId: haus
+generated: '2026-08-12'
+method: searched
+source: https://www.haus.io/pricing
+created: '2026-08-12'
+modified: '2026-08-12'
+http_status: 200
+plan_count: 4
+pricing_published: false
+currency: null
+billing_period: null
+description: >-
+  Haus publishes a four-tier plan ladder on its pricing page with a full
+  feature-comparison matrix, but it publishes NO prices, no currency and no
+  billing period for any tier. Every tier's only call to action is "Get a demo".
+  The tiers are packaged by capability (channels measurable, sales channels and
+  KPIs, geography, which Haus products are included) and by the human services
+  attached (strategist, data scientist, MMM specialist) rather than by an API
+  quota, request volume or seat count — Haus sells a measurement service, not
+  metered API access. No tier mentions an API, API keys, rate limits or
+  developer access; the "Integrations" rows describe Haus pulling data IN from
+  ad platforms, Shopify/Amazon and customer data warehouses, not an API Haus
+  exposes to customers.
+plans:
+- id: haus-basics
+  name: Basics
+  qualifier: for Shopify
+  price: null
+  currency: null
+  billing_period: null
+  price_note: Not published — "Get a demo" only.
+  positioning: Best for self-starter DTC brands selling via Shopify and Amazon.
+  included:
+  - Self-serve platform, geo-based tests on major ad platforms (Meta, Google, TikTok)
+  - Incremental revenue and orders measured via Shopify and Amazon
+  - Fully-guided onboarding and responsive customer support
+  - Ad platform, Shopify and Amazon data integrations
+  limits:
+    geography: US only
+    channels: Geo-segmentable channels only
+    sales_channels: Digital sales — orders and revenue
+    products: GeoLift
+- id: haus-core
+  name: Core
+  price: null
+  currency: null
+  billing_period: null
+  price_note: Not published — "Get a demo" only.
+  positioning: >-
+    Best for mid-size brands running paid media on multiple platforms and selling
+    through multiple channels.
+  includes_tier: haus-basics
+  included:
+  - Custom business metrics (LTV, new vs. returning customers)
+  - Cross-channel impact measurement
+  - International testing
+  - Dedicated Measurement Strategist and access to the Data Science team
+  - Data warehouse integrations (Snowflake, BigQuery)
+  - Partner Benefits Program (ad-platform credit offers)
+  limits:
+    geography: International
+- id: haus-plus
+  name: Plus
+  badge: Popular
+  price: null
+  currency: null
+  billing_period: null
+  price_note: Not published — "Get a demo" only.
+  positioning: >-
+    Best for companies investing in brand and growth marketing who want flexible
+    testing paired with holistic cross-channel measurement.
+  includes_tier: haus-core
+  included:
+  - Non-geo channel testing (influencers, podcasts, OOH, TV) via Time Tests and Fixed Geo Tests
+  - More frequent experiment readouts
+  - Causal MMM built on the customer's own experiments
+  - Scenario planning for budget shifts and seasonality
+  - MMM Specialist
+  - Priority access to new products and features
+- id: haus-enterprise
+  name: Enterprise
+  price: null
+  currency: null
+  billing_period: null
+  price_note: Not published — "Get a demo" only.
+  positioning: >-
+    Best for large, complex organizations that need a single source of truth to
+    measure impact and guide strategy.
+  included:
+  - Portfolio-level tests across brands and regions
+  - Advanced experiment design support
+  - Unified measurement framework for hard-to-measure campaigns
+  - Experiment-grounded Causal MMM with scenario planning
+  - Embedded Measurement Strategist, dedicated Data Scientist, MMM Specialist available
+  - Access to the R&D team for custom tools and solutions
+add_ons:
+- name: International support
+  description: Expand geo coverage.
+  price: null
+- name: Additional experiment KPIs
+  description: Track more metrics.
+  price: null
+- name: Retail breakouts
+  description: Connect all retail and marketplace sales.
+  price: null
+- name: Additional brands
+  description: Measure performance across a portfolio.
+  price: null
+- name: Additional Causal MMM Models
+  description: Extended MMM metrics.
+  price: null
+- name: Managed services
+  description: Deeper hands-on support.
+  price: null
+api_access:
+  offered_in_any_tier: false
+  note: >-
+    No tier on the published pricing page offers API access, API keys, a
+    developer plan, request quotas or rate limits. The pricing page names no API.
+evidence:
+- url: https://www.haus.io/pricing
+  http_status: 200
+  fetched: '2026-08-12'
+  observed:
+  - Four tier cards — Basics, Core, Plus, Enterprise — each with a "Get a demo" CTA and no price
+  - '"Compare all features" matrix rows covering media measured, sales channels/KPIs, countries, Haus products, services and data integrations'
+  - Optional add-ons block with six add-ons, none priced

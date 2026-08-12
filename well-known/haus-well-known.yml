@@ -1,0 +1,114 @@
+generated: '2026-08-12'
+method: probed
+source: >-
+  Live HTTP probes of the /.well-known/ discovery surface on every Haus host
+  reachable in DNS on 2026-08-12. apis.yml carries no apis[] entries and no
+  OpenAPI servers[] exist, so the host set is the marketing host, the customer
+  application host and the trust-center host.
+description: >-
+  Haus serves NO first-party /.well-known/ discovery surface. www.haus.io answers
+  every /.well-known/* path with an HTTP 404 carrying a Webflow "Invalid
+  .well-known request" HTML body; app.haus.io answers 404 with the Next.js SPA
+  error shell. The only 200s on the entire probe are on trust.haus.io, and they
+  are NOT Haus documents — see ownership_finding below. No WellKnown or
+  SecurityTxt pointer is emitted in apis.yml, because Haus does not publish one.
+pointer_emitted: false
+pointer_reason: >-
+  No path returned a 200 carrying a document that belongs to Haus. Emitting a
+  WellKnown pointer here would credit Haus with a discovery surface it does not
+  serve.
+hosts:
+- host: https://www.haus.io
+  role: marketing site (Webflow)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  note: >-
+    All 404s return an HTML body reading "Invalid .well-known request" — an
+    explicit negative, not an SPA catch-all.
+- host: https://app.haus.io
+  role: customer application (Next.js, login-gated)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://trust.haus.io
+  role: trust center (CNAME'd to SafeBase, a third-party vendor)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: application/json
+    file: haus-trust-openid-configuration.json
+    owner: safebase
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: application/json
+    file: haus-trust-oauth-authorization-server.json
+    owner: safebase
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+ownership_finding:
+  verdict: third-party
+  summary: >-
+    The two 200s on trust.haus.io are real, correctly-typed OAuth 2.0
+    Authorization Server Metadata documents, but they describe SafeBase's
+    hosted MCP server, not any Haus API. Both bodies declare
+    issuer "https://app.safebase.io/api/mcp", service_documentation
+    "https://docs.safebase.io/mcp", and authorization/token/registration/
+    revocation endpoints all under app.safebase.io. trust.haus.io is Haus's
+    trust center rendered by SafeBase on a CNAME'd subdomain, so the vendor's
+    well-known surface is served under Haus's domain. Judged by what the
+    documents say about themselves (STEP 0c), they belong to SafeBase.
+  saved_as_evidence: true
+  credited_to_haus: false
+  pattern: vendor-CNAME well-known false positive
+  hosts_affected:
+  - trust.haus.io
+dns_negative_probes:
+  description: >-
+    Candidate API/docs hostnames resolved before probing. Every one is NXDOMAIN,
+    so there is no API host to probe a /.well-known/ surface on.
+  nxdomain:
+  - api.haus.io
+  - api-staging.haus.io
+  - graph.haus.io
+  - gateway.haus.io
+  - public-api.haus.io
+  - data.haus.io
+  - developer.haus.io
+  - dev.haus.io
+  - partner.haus.io
+  - connect.haus.io
+  - docs.haus.io
+  - help.haus.io

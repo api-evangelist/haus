@@ -1,0 +1,34 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.haus.io/llms.txt
+description: >-
+  Haus publishes an llms.txt at the root of its marketing host (www.haus.io;
+  haus.io serves the identical byte-for-byte document). It was fetched verbatim
+  on 2026-08-12. The file indexes product pages, use cases, blog posts and
+  customer case studies only — it names no developer portal, no API reference,
+  no OpenAPI/AsyncAPI/GraphQL contract, no SDK and no MCP server. It is a
+  marketing site map for LLMs, not a developer surface.
+documents:
+- file: haus-llms.txt
+  url: https://www.haus.io/llms.txt
+  host: www.haus.io
+  entity: Haus Analytics, Inc.
+  http_status: 200
+  content_type: text/plain
+  bytes: 10795
+  fetched: '2026-08-12'
+  sections:
+  - Product Information
+  - Use Cases
+  - Blog
+  - Case Studies
+  developer_references: 0
+mirrors:
+- url: https://haus.io/llms.txt
+  http_status: 200
+  bytes: 10795
+  note: Identical document served on the apex host; not saved twice.
+not_captured:
+- url: https://www.haus.io/llms-full.txt
+  http_status: 404
+  reason: Not published by Haus.
