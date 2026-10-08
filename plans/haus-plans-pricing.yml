@@ -128,3 +128,33 @@ evidence:
   - Four tier cards — Basics, Core, Plus, Enterprise — each with a "Get a demo" CTA and no price
   - '"Compare all features" matrix rows covering media measured, sales channels/KPIs, countries, Haus products, services and data integrations'
   - Optional add-ons block with six add-ons, none priced
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Basics
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Core
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Plus
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
