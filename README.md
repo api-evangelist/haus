@@ -64,6 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Haus is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Haus is an AI-powered causal marketing measurement platform that helps enterprise brands quantify the true incrementality of their advertising spend. The platform runs on-demand geo-based incrementality experiments (treatment vs. holdout groups), causal media mix modeling (MMM) grounded in experimental data, and daily causal attribution reporting, so marketers can see which channels actually drive revenue. Haus reports running thousands of experiments annually across tens of billions of dollars in optimized ad spend for customers such as FanDuel, Intuit, Wayfair, and Coursera. Founded by former Google economists, Haus is backed by Insight Partners.
 
-Backed by: insight-partners — https://www.haus.io/
+**Areas:** Company · Marketing · Analytics · Incrementality · Measurements · Attribution · Media Mix Modeling · Causal Inference · Advertising · MarTech
+
+## Haus on APIs.io
+
+Everything profiled for Haus is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/haus/](https://apis.io/providers/haus/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Haus Domain Security](https://apis.io/security/haus/haus-domain-security/)
+- [Haus Trust Center](https://apis.io/security/haus/haus-trust-center/)
+- [Haus Vulnerability Disclosure](https://apis.io/security/haus/haus-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Haus Plans Pricing](https://apis.io/plans/haus/haus-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.haus.io/)
+- [Pricing](https://www.haus.io/pricing)
+- [Sign up](https://www.haus.io/demo)
+- [Support](https://www.haus.io/support)
+- [Blog](https://www.haus.io/blog)
+- [Terms of service](https://haus.io/legal/terms)
+- [Privacy policy](https://haus.io/legal/privacy-policy)
+- [Status](https://status.haus.io/)
+
+## API Evangelist rating
+
+**Kin Score 31.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 92.1 |
+
+**Agent readiness 15.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 30.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/haus/](https://apis.io/providers/haus/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Haus: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/haus/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
